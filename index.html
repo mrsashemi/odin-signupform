@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRK Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heroImage">
+            <div class="headerBackground">
+                <h1>@wizardsrobbingkids</h1>
+            </div>
+            <div class="glass"></div>
+            <img src="images/internetwars.jpg" alt="portalglow">
+        </div>
+        <form action="">
+            <p>This isn't a real service! 
+            <br> You need art in your life. Sign up now for nothing then get off your computer and talk to Wizards Robbing Kids if you want to buy art.
+            <br> <br> You know you want to!</p>
+            <div class="signup">
+                <p class="letsgo">Let's do this!</p>
+                <div class="firstName">
+                    <label for="firstName ">First Name*</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="lastName">
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="email">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="phone">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="pwd">
+                    <label for="pwd">Password*</label>
+                    <input type="password" id="pwd" name="pwd" minlength="8" required>
+                </div>
+                <div class="confirmPWD">
+                    <label for="confrimPWD">Confirm Password*</label>
+                    <input type="password" id="confirmPWD" name="confirmPWD" minlength="8" required>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

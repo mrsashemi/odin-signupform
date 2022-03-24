@@ -1,0 +1,241 @@
+:root {
+    --main-color: #1e8067;
+    --secondary-color: #e29337;
+}
+
+@font-face {
+    font-family: '8bit';
+    src: url('fonts/VT323-Regular.ttf');
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-size: contain
+}
+
+* {
+    font-family: "8bit", 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0 3vw 0 3vw;
+}
+
+/* left side */
+
+.heroImage {
+    position: relative;
+    display: flex;
+    max-width: fit-content;
+}
+
+.glass {
+    position: absolute;
+    z-index: 2;
+    height: 80vh;
+    width: 100%;
+    /* From https://css.glass & https://www.colorzilla.com/gradient-editor/*/
+    background: linear-gradient(45deg, 
+    rgba(149,149,149,0.38) 0%,
+    rgba(13,13,13,0.28) 46%,
+    rgba(1,1,1,0.38) 50%,
+    rgba(10,10,10,0.28) 53%,
+    rgba(78,78,78,0.38) 76%,
+    rgba(56,56,56,0.28) 87%,
+    rgba(27,27,27,0.38) 100%);
+    border-radius: 16px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+    backdrop-filter: blur(2.6px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(70, 64, 64, 1);
+}
+
+.glass:hover {
+    background-image: url('images/sparkles.gif');
+    mix-blend-mode: color-dodge;
+    opacity: 0.3;
+}
+
+img[src="images/internetwars.jpg"] {
+    position: relative;
+    z-index: 1;
+    height: 80vh;
+    border-radius: 16px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45), 0 0 5px 5px var(--main-color);
+}
+
+
+.headerBackground {
+    position: absolute;
+    top: 12vh;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* From https://css.glass */
+    background: rgba(78, 78, 78, 0.19);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border: 1px solid rgba(78, 78, 78, 0.3);
+}
+
+h1 {
+    position: relative;
+    font-size: 5.8vh;
+    z-index: 4;
+    right: 0.25vw;
+    color: white;
+    padding: 0.5vh;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+/* right side */
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    bottom: 10vh;
+}
+
+p {
+    margin: 0 0 0 2vw;
+    font-size: 3.5vh;
+    text-shadow:
+   -1px -1px 0 var(--main-color),  
+    1px -1px 0 var(--main-color),
+    -1px 1px 0 var(--main-color),
+     1px 1px 0 var(--main-color);
+}
+
+.letsgo {
+    font-size: 3vh;
+    grid-column: span 2;
+    color: black;
+    margin: 0;
+    text-shadow:
+   -1px -1px 0 var(--secondary-color),  
+    1px -1px 0 var(--secondary-color),
+    -1px 1px 0 var(--secondary-color),
+     1px 1px 0 var(--secondary-color);
+}
+
+.signup {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vh;
+    padding: 1vh 0 2vw 2vw;
+    border-style: solid;
+    border-color: var(--main-color);
+    box-shadow: 5px 5px 5px var(--secondary-color);
+}
+
+label {
+    color: white;
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+button {
+    position: relative;
+    top: 2vh;
+    width: 15vw;
+    height: 7vh;
+    margin: 0 0 0 2vw;
+    font-size: 3vh;
+    border-radius: 10px;
+    color: var(--main-color);
+    border: solid;
+    box-shadow: 0px 2px 5px white;
+    background-color: transparent;
+}
+
+button:hover {
+    background-image: url('images/sparkles.gif');
+    text-shadow: 
+    -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+     1px 1px 0 white;
+    box-shadow: 0px 5px 5px var(--secondary-color);
+    cursor: pointer;
+}
+
+button:active {
+    background-image: url('images/sparkles.gif');
+    box-shadow: 0px 2px 5px var(--main-color);
+}
+
+input {
+    appearance: none;
+    width: 25vw;
+    height: 3vh;
+    font-size: 2vh;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px var(--main-color) inset, 0px 2px 5px var(--secondary-color);
+}
+
+input:hover {
+    background-image: url('images/sparkles.gif');
+    background-color: white;
+    background-blend-mode: difference;
+}
+
+.firstName,
+.lastName,
+.email,
+.phone,
+.pwd,
+.confirmPWD {
+    display: flex;
+    flex-direction: column;
+    font-size: 2vh;
+}
+
+#firstName,
+#lastName,
+#email,
+#phone,
+#pwd,
+#confirmPWD {
+    border: 2px solid white;
+}
+
+#firstName:invalid,
+#lastName:invalid,
+#email:invalid,
+#pwd:invalid,
+#confirmPWD:invalid {
+    border-color: red;
+} 
+
+#firstName:valid,
+#lastName:valid,
+#email:valid,
+#pwd:valid,
+#confirmPWD:valid {
+    background-image: url('images/sparkles.gif');
+    background-color: white;
+    background-blend-mode: difference;
+    border: 5px solid;
+    border-color: green;
+} 
